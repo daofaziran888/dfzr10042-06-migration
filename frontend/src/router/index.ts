@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Overview from '@/views/Overview.vue'
+import JoinKeyVersions from '@/views/JoinKeyVersions.vue'
 import WorkbenchView from '@/views/WorkbenchView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'overview', component: Overview },
+    { path: '/join-keys', name: 'join-keys', component: JoinKeyVersions },
     { path: '/:moduleKey', name: 'module', component: WorkbenchView, props: true },
   ],
 })
